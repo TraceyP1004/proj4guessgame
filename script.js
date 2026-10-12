@@ -65,6 +65,8 @@ function checkNumber(msg) {
     num = 8;
   } else if (msg === 'nine') {
     num = 9;
+    } else if (msg === 'zero') {
+    num = 0;
   }
   // The above could (should?) be refactored to a switch case
 
