@@ -90,7 +90,9 @@ function checkNumber(msg) {
     // Check the number and provide feedback
     if (num === randomNum) {
         const h2 = document.createElement('h2');
-        h2.textContent = `Congrats! You have guessed the number! It was ${num}`;
+        h2.textContent = `Congrats! You have guessed the number! 
+        It was ${num}`;
+        
     
     const button = document.createElement('button');
     button.classList.add('play-again');
@@ -105,15 +107,19 @@ function checkNumber(msg) {
     msgEl.append(h2, button);
     } else if (num > randomNum) {
         const div = document.createElement('div');
-        div.textContent = 'GO LOWER';
+        div.textContent = `${num} is incorrect, 
+        GO LOWER`;
+
 
         msgEl.innerHTML = '';
         msgEl.append(div);
     } else {
         // if (num < randomNum)
         const div = document.createElement('div');
-        div.textContent = 'GO HIGHER';
+        div.textContent = `${num} is incorrect, 
+        GO HIGHER`;
 
+        
         msgEl.innerHTML = '';
         msgEl.append(div);
     }
